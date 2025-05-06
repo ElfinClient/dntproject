@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food RSVP</title>
+    <link rel="stylesheet" href="./styles-signup.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@300,301,400,401,500,501,600,601,700,701&f[]=supreme@100,101,200,201,300,301,400,401,500,501,700,701,800,801&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="./images/logo w font.png" alt="logo">
+        <h1>Dinnerparty planner</h1>
+    </div>
+
+    <div class="details">
+        <div id="date-time">
+            <p>Date: <span id="date">2020-12-24</span></p>
+            <p id="time">18:00</p>
+        </div>
+        
+        <div id="location">
+            <img alt="Location Icon" src="./images/location.png">
+            <p>Location: <span id="street-location">123 Main St</span></p>
+        </div>
+    </div>
+
+    <form action="https://script.google.com/a/macros/student.shcs.nsw.edu.au/s/AKfycbwmomiGebicfiwQURWTwV5SJ7_5aP6OMVzjFp1OVJVFgd3jOSi0OZu1974OyOOmJuSQ/exec" method="post">
+        <div class="RSVP-amount">
+            <p>How many people are you RSVP'ing for?</p>
+            <div class="number-input">
+                <button type="button" onclick="changeRSVPCount(1)">&#9650;</button>
+                <input type="number" id="rsvpCount" name="rsvpCount" min="1" max="9" value="1" readonly>
+                <button type="button" onclick="changeRSVPCount(-1)">&#9660;</button>
+            </div>
+        </div>
+
+        <div id="dietary">
+            <label for="dietaryPreferences">Dietary Preferences:</label>
+            <select id="dietaryPreferences" name="dietaryPreferences">
+                <option value="none">None</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="halal">Halal</option>
+                <option value="kosher">Kosher</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="customDietary" name="customDietary" placeholder="Please specify" style="display: none;">
+        </div>
+
+        <button type="submit" id="join-button"><h3>Join Party</h3></button>
+    </form>
+
+    <script>
+        const dietaryPreferences = document.getElementById('dietaryPreferences');
+        const customDietary = document.getElementById('customDietary');
+
+        dietaryPreferences.addEventListener('change', function() {
+            if (this.value === 'other') {
+                customDietary.style.display = 'block';
+            } else {
+                customDietary.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+    <script src="./script-signup.js"></script>
+</html>
