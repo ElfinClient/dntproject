@@ -101,6 +101,7 @@ p, a {
     width: 60%;
     height: 4.9rem;
     margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
     margin: 0 auto; /* Centers the button horizontally */
     display: flex; /* Enables flexbox for centering content */
     justify-content: center; /* Centers content horizontally */
@@ -131,6 +132,15 @@ p, a {
 
 #dietary {
     margin: 1rem;
+}
+#dietary #dietaryPreferences {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    background-color: white;
+    border: solid 1px black;
+    text-align: left;
+    height: 2rem;
 }
 #customDietary {
     width: 100%;
