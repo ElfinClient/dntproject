@@ -14,19 +14,25 @@
     </div>
 
     <div class="details">
-        <div id="date-time">
-            <p>Date: <span id="date">2020-12-24</span></p>
-            <p id="time">18:00</p>
+        <div id="details-left">
+            <div id="date-time">
+                <p>Date: <span id="date">2020-12-24</span></p>
+                <p id="time">18:00</p>
+            </div>
+            
+            <div id="location">
+                <img alt="Location Icon" src="./images/location.png">
+                <p>Location: <span id="street-location">1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</span></p>
+            </div>
         </div>
-        
-        <div id="location">
-            <img alt="Location Icon" src="./images/location.png">
-            <p>Location: <span id="street-location">123 Main St</span></p>
-        </div>
+       <div id="details-right">
+            <img src="./images/Screenshot 2025-05-16 131924.png" alt="">
+       </div>
     </div>
 
     <form action="https://script.google.com/a/macros/student.shcs.nsw.edu.au/s/AKfycbwmomiGebicfiwQURWTwV5SJ7_5aP6OMVzjFp1OVJVFgd3jOSi0OZu1974OyOOmJuSQ/exec" method="post">
-        <div class="RSVP-amount">
+        <div id="rsvp">
+            <div class="RSVP-amount">
             <p>How many people are you RSVP'ing for?</p>
             <div class="number-input">
                 <button type="button" onclick="changeRSVPCount(1)">&#9650;</button>
@@ -48,6 +54,8 @@
             </select>
             <input type="text" id="customDietary" name="customDietary" placeholder="Please specify" style="display: none;">
         </div>
+        </div>
+        
 
         <button type="submit" id="join-button"><h3>Join Party</h3></button>
     </form>
