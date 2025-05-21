@@ -41,6 +41,20 @@ p, a {
     flex-direction: column;
     width: 40%;
 }
+#details-left h2 {
+    font-size: 1.7rem;
+    font-family: 'Gambetta', serif;
+    font-weight: 800;
+    margin: 1rem;
+    padding: 0;
+}
+#details-left #date-time {
+    text-align: left;
+    width: 100%;
+}
+#details-left #date-time p {
+    margin: 1rem;
+}
 #details-right {
     display: inline-block;
     width: 60%;
